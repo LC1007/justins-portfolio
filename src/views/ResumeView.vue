@@ -7,12 +7,13 @@
           Hi, I am <br />
           Justin <span>Scholtz</span>
         </h2>
-<pre class="intro-text">
+        <pre class="intro-text">
   async function getData(){
     const data = await axios.get("Aspiring Front End <span>Developer</span>")
-}  </pre>
+}
+</pre>
         <div class="btns">
-          <button class="contact-btn">Contact Me</button>
+          <button class="contact-btn m-0">Contact Me</button>
           <button class="project-btn">
             Projects<i class="bi bi-box-arrow-up-right mx-2"></i>
           </button>
@@ -27,51 +28,33 @@
         </div>
       </div>
     </div>
-    <!-- About Me Section -->
 
-    <div class="about-container m-5">
-      <div class="row">
-        <div class="col-sm-12 col-md-6 col">
-          <img
-            src="https://images.pexels.com/photos/6424589/pexels-photo-6424589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            class="mb-4 w-75"
-            alt=""
-          />
-        </div>
-        <div class="col-12 col-md-6 col">
-          <h2>About <span>Me</span></h2>
-          <p>
-            My name is Justin Scholtz and web development has been a passion of
-            mine ever since 2016 when I attended a intro to web development at a
-            company called Rlabs, we did a month long course where we were
-            introduced to HTML and CSS. What made me realize it was my passion
-            was the amount of times I could of given up but didn't, I still had
-            that fire in me to succeed the challenges and become a front end web
-            developer. My journey consists of me joining a bootcamp and self
-            studing, over my journey I've reached a point where I'm very
-            comfortable with HTML and CSS but I'm still learning the ropes of
-            JavaScript, I would love to then grow my VUE JS skills as my JS
-            framework to broaden my skill set. I now feel like I'm ready to take
-            on the next step in my journey and find employement as front end
-            developer, Life Choices prepared me well for the next stage of my
-            life so I'm ready for anything and everything.
-          </p>
-        </div>
-      </div>
+    <!-- Resume Section -->
+
+    <div v-for="item in skills" :key="item.id">
+        <p>{{ item.skillName }}</p>
     </div>
+
   </div>
 </template>
 
-<script></script>
+<script>
+
+export default {
+    computed: {
+        skills(){
+            return this.$store.state.skills
+        }
+     },
+     mounted(){
+        this.$store.dispatch('getData')
+     }
+};
+</script>
 
 <style scoped>
-
-img {
-  max-width: 100%;
-  display: block;
-}
 .float::before {
-  content: "<home/>";
+  content: "<resume/>";
   font-size: 2rem;
   font-weight: lighter;
   opacity: 0.3;
@@ -83,15 +66,16 @@ img {
   gap: 2rem;
   height: 100%;
 }
-.icons {
-  font-size: 3rem;
-}
 
 .intro-container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(7, 6rem);
   position: relative;
+}
+
+.icons {
+  font-size: 3rem;
 }
 
 button {
@@ -108,6 +92,11 @@ button {
   margin-left: 1rem;
   background-color: transparent;
   color: #000;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .intro-title {
