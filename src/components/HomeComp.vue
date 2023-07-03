@@ -1,29 +1,35 @@
 <template>
-    <div class="container">
-        <div class="intro-container">
-            <div class="intro-title">
-              <p class="float m-0"></p>
-              <h2>Hi, I am <br> Justin <span>Scholtz</span></h2>
-<pre class="intro-text">
-  function getData(){
-      console.log("Aspiring Front End <span>Developer</span>")
-  }
+  <div>
+    <div class="intro-container">
+      <div class="intro-title">
+        <p class="float m-0"></p>
+        <h2>
+          Hi, I am <br />
+          Justin <span>Scholtz</span>
+        </h2>
+        <pre class="intro-text">
+async function getData(){
+  const data = await axios.get("Aspiring Front End <span>Developer</span>")
+}
 </pre>
-              <div class="btns">
-                <button class="contact-btn">Contact Me</button>
-                <button class="project-btn">Projects<i class="bi bi-box-arrow-up-right mx-2"></i></button>
-              </div>
-            </div>
-            <div class="intro-img"></div>
-            <div class="intro-bg">
-              <div class="icon-container">
-                <a href="#"><i class="bi bi-linkedin text-white icons"></i></a>
-                <a href="#"><i class="bi bi-instagram text-white icons"></i></a>
-                <a href="#"><i class="bi bi-facebook text-white icons"></i></a>
-              </div>
-            </div>
-          </div>
+        <div class="btns">
+          <button class="contact-btn m-0">Contact Me</button>
+          <router-link to="/resume" class="project-btn">
+            Projects<i class="bi bi-box-arrow-up-right mx-2"></i>
+          </router-link>
+        </div>
+      </div>
+      <div class="intro-img"></div>
+      <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" class="intro-mobile" alt="">
+      <div class="intro-bg">
+        <div class="icon-container">
+          <a href="#"><i class="bi bi-linkedin text-white icons"></i></a>
+          <a href="#"><i class="bi bi-instagram text-white icons"></i></a>
+          <a href="#"><i class="bi bi-facebook text-white icons"></i></a>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -34,83 +40,111 @@
 
 <style scoped>
 
-    .float::before{
-        content: '<hello/>';
-        font-size: 2rem;
-        font-weight: lighter;
-        opacity: .3;
-    }
-.icon-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    height: 100%;
-  }
+.float::before {
+  content: "<welcome/>";
+  font-size: 2rem;
+  font-weight: lighter;
+  opacity: 0.3;
+}
 
-  .intro-container{
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(7, 6rem);
-    position: relative;
-  }
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+}
 
-  .icons{
-    font-size: 3rem;
-  }
+.intro-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(10, 6rem);
+  position: relative;
+}
 
-  button{
-    padding: 1rem 2.5rem;
-    border: none;
-  }
+.icons {
+  font-size: 3rem;
+}
 
-  .contact-btn{
-    background-color: #FE481C;
-    color: #fff;
-  }
+button {
+  padding: 1rem 2.5rem;
+  border: none;
+}
 
-  .project-btn{
-    margin-left: 1rem;
-    background-color: transparent;
-    color: #000;
-  }
+.contact-btn {
+  background-color: #fe481c;
+  color: #fff;
+}
 
-  img{
-    max-width: 100%;
-    display: block;
-  }
+.project-btn {
+  margin-left: 1rem;
+  background-color: transparent;
+  color: #000;
+  text-decoration: none;
+  font-weight: lighter;
+}
 
-  .intro-title{
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.intro-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  color: #000;
+  grid-column: 1 / 6;
+  grid-row: 2 / 7;
+  font-weight: bolder;
+}
+
+.intro-title>h2 {
+  font-size: calc(4rem + 6 * ((100vw - 320px) / 680));
+}
+
+.intro-text {
+  font-size: calc(.6rem + 6 * ((100vw - 320px) / 680));
+  font-weight: lighter;
+}
+
+.intro-img {
+  grid-column: 6 / 9;
+  grid-row: 1 / -1;
+  background: url(https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.intro-mobile {
+  display: none;
+}
+
+.intro-bg {
+  grid-column: 1 / 6;
+  grid-row: 8 / -1;
+  background-color: #262626;
+}
+
+@media (width <= 64rem) {
+  .intro-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 1rem;
-    color: #000;
-    grid-column: 1 / 6;
-    grid-row: 1 / 6;
-    font-weight: bolder;
+    margin-top: 3rem;
   }
 
-  .intro-title > h2{
-    font-size: 5rem;
+  .intro-title {
+    text-align: center;
   }
 
+  .intro-mobile {
+    display: block;
+  }
+}
+
+@media (width <= 26rem) {
   .intro-text{
-    font-size: 1.3rem;
-    font-weight: lighter;
+    display: none;
   }
-
-  .intro-img{
-    grid-column: 6 / 9; 
-    grid-row: 1 / 8;
-    background: url(https://images.pexels.com/photos/225250/pexels-photo-225250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) center no-repeat;   
-    background-size: cover;
-  }
-
-  .intro-bg{
-    grid-row: 6 / 8;
-    grid-column: 1 / 6;
-    background-color: #262626;
-  }
-
+}
 </style>
