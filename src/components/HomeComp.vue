@@ -21,7 +21,7 @@ async function getData(){
         </div>
       </div>
       <div class="intro-img"></div>
-      <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" loading="lazy" class="intro-mobile" alt="">
+      <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" loading="lazy" class="intro-mobile img" alt="">
       <div class="intro-bg">
         <div class="icon-container">
           <a href="#"><i class="bi bi-linkedin text-white icons"></i></a>
@@ -108,12 +108,27 @@ img {
 .intro-text {
   font-size: calc(.6rem + 6 * ((100vw - 320px) / 680));
   font-weight: lighter;
+  animation: type 3.5s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+.intro-text::-webkit-scrollbar{
+  display: none;
+}
+
+@keyframes type {
+  from{ width: 0}
+  to{ width: 100%}
+}
+
+@keyframes blink-caret {
+  from, to{ border-color: transparent}
+  50%{ border-color: orange;}
 }
 
 .intro-img {
   grid-column: 6 / 9;
   grid-row: 1 / -1;
-  background: url(https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg) center no-repeat;
+  background: url(https://images.pexels.com/photos/3671300/pexels-photo-3671300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) center no-repeat;
   background-size: cover;
 }
 
@@ -150,8 +165,9 @@ img {
 }
 
 .intro-h2{
-  animation-name: fadeTest;
+  animation-name: fadeIn;
   animation-duration: 1070ms;
+  overflow: hidden;
 }
 
 span{
@@ -160,6 +176,25 @@ span{
   animation-duration: 1070ms;
   animation-delay: 450ms;
   animation-fill-mode: forwards;
+}
+
+.img{
+  filter: grayscale();
+  animation-name: fadeImg;
+  animation-fill-mode: forwards;
+  animation-duration: 1050ms;
+}
+
+@keyframes fadeImg {
+  0%{
+    filter: grayscale();
+  }
+  50%{
+    filter: grayscale();
+  }
+  100%{
+    filter: none;
+  }
 }
 
 @keyframes fadeColor {
@@ -174,7 +209,7 @@ span{
   }
 }
 
-@keyframes fadeTest {
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }
