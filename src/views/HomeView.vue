@@ -6,7 +6,8 @@
       <div class="row">
         <div class="col-sm-12 col-md-6 col">
           <img
-            src="https://images.pexels.com/photos/6424589/pexels-photo-6424589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://i.postimg.cc/kGN2090d/C12-Justin-Scholtz-3-min.jpg"
+            loading="lazy"
             class="mb-4 w-75"
             alt=""
           />

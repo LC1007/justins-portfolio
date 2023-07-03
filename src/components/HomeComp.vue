@@ -3,13 +3,14 @@
     <div class="intro-container">
       <div class="intro-title">
         <p class="float m-0"></p>
-        <h2>
+        <h2 class="intro-h2">
           Hi, I am <br />
           Justin <span>Scholtz</span>
         </h2>
         <pre class="intro-text">
 async function getData(){
   const data = await axios.get("Aspiring Front End <span>Developer</span>")
+  console.log("Welcome")
 }
 </pre>
         <div class="btns">
@@ -20,7 +21,7 @@ async function getData(){
         </div>
       </div>
       <div class="intro-img"></div>
-      <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" class="intro-mobile" alt="">
+      <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" loading="lazy" class="intro-mobile" alt="">
       <div class="intro-bg">
         <div class="icon-container">
           <a href="#"><i class="bi bi-linkedin text-white icons"></i></a>
@@ -145,6 +146,43 @@ img {
 @media (width <= 26rem) {
   .intro-text{
     display: none;
+  }
+}
+
+.intro-h2{
+  animation-name: fadeTest;
+  animation-duration: 1070ms;
+}
+
+span{
+  color: #000;
+  animation-name: fadeColor;
+  animation-duration: 1070ms;
+  animation-delay: 450ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeColor {
+  0%{
+    color: #000;
+  }
+  50%{
+    color: #000;
+  }
+  100%{
+    color: var(--orangeColor);
+  }
+}
+
+@keyframes fadeTest {
+  0% {
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }
 </style>
