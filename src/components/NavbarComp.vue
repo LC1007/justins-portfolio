@@ -2,7 +2,7 @@
   <div class="container">
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top px-6">
       <div class="container-fluid">
-        <router-link class="nav-links active" to="/">Dev.</router-link>
+        <h1>Dev.</h1>
         <button
           class="navbar-toggler"
           type="button"
@@ -24,9 +24,6 @@
             </li>
             <li class="nav-item">
               <router-link class="nav-links" to="/testimonials">Testimonials</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-links" to="/contact">Contact</router-link>
             </li>
           </ul>
         </div>
@@ -61,10 +58,15 @@
         margin: auto;
     }
 
-    nav a.router-link-exact-active{
+
+    .px-6{
+      padding-right: 2rem;
+    }
+
+    nav .nav-links.router-link-exact-active{
       color: #fff;
       background-color: var(--orangeColor);
       border-radius: 3px;
-      padding: .3rem 1rem;
+      padding: .5rem 1rem;
     }
 </style>
