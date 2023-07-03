@@ -49,7 +49,6 @@ export default createStore({
     async getTestimonials({commit}){
       const getTestimonialData = await axios.get(url)
       commit('setTestimonials', getTestimonialData.data.testimonials)
-      console.log(getTestimonialData.data.testimonials);
     }
   },
   modules: {
