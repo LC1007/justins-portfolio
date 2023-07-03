@@ -1,32 +1,5 @@
 <template>
   <div class="container">
-    <div class="intro-container">
-      <div class="intro-title">
-        <p class="float m-0"></p>
-        <h2>
-          Hi, I am <br />
-          Justin <span>Scholtz</span>
-        </h2>
-<pre class="intro-text">
-  async function getData(){
-    const data = await axios.get("Aspiring Front End <span>Developer</span>")
-}  </pre>
-        <div class="btns">
-          <button class="contact-btn">Contact Me</button>
-          <button class="project-btn">
-            Projects<i class="bi bi-box-arrow-up-right mx-2"></i>
-          </button>
-        </div>
-      </div>
-      <div class="intro-img"></div>
-      <div class="intro-bg">
-        <div class="icon-container">
-          <a href="#"><i class="bi bi-linkedin text-white icons"></i></a>
-          <a href="#"><i class="bi bi-instagram text-white icons"></i></a>
-          <a href="#"><i class="bi bi-facebook text-white icons"></i></a>
-        </div>
-      </div>
-    </div>
     <!-- About Me Section -->
 
     <div class="about-container m-5">
@@ -62,7 +35,8 @@
   </div>
 </template>
 
-<script></script>
+<script>
+</script>
 
 <style scoped>
 
