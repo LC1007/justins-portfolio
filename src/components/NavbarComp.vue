@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top px-6">
       <div class="container-fluid">
-        <h1>._.</h1>
+        <h1>Dev.</h1>
         <button
           class="navbar-toggler"
           type="button"

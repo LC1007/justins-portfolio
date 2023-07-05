@@ -2,7 +2,7 @@
     <div id="projects"></div>
     <div>
         <div class="container">
-            <h1 v-motion-slide-bottom class="display-1 text-center m-5">Pro<span>jects</span></h1>
+            <h1 v-motion-slide-bottom class="display-1 text-center mb-5 mt-2">Pro<span>jects</span></h1>
             <div class="row mb-5">
                 <div class="col-12 col-md-6 col-lg-4 mb-3" v-for="item in projects" :key="item.id" v-motion-slide-visible-once-bottom>
                     <div class="card h-100 w-100" style="width: 18rem">

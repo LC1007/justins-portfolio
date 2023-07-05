@@ -3,7 +3,7 @@
     <div id="resume"></div>
     <!-- Timeline Section -->
     <div class="container">
-      <h1 v-motion-slide-bottom class="display-1 text-center m-5">
+      <h1 v-motion-slide-bottom class="display-1 text-center mb-5 mt-2">
         Time<span>line</span>
       </h1>
       <div class="d-md-flex justify-content-center gap-5 container">
@@ -12,7 +12,7 @@
           <div
             v-for="item in education"
             :key="item.id"
-            v-motion-slide-visible-once-bottom
+            v-motion-slide-visible-bottom
           >
             <div class="card border-dark mb-3 card-height card-width">
               <div class="card-body">
@@ -28,7 +28,7 @@
           <div
             v-for="item in work"
             :key="item.id"
-            v-motion-slide-visible-once-bottom
+            v-motion-slide-visible-bottom
           >
             <div class="card border-dark mb-3 card-height card-width">
               <div class="card-body">
@@ -49,7 +49,7 @@
           class="col-12 col-md-6 col-lg-4"
           v-for="item in skills"
           :key="item.id"
-          v-motion-slide-visible-once-bottom
+          v-motion-slide-visible-bottom
         >
           <div class="card h-100 w-100">
             <div class="d-flex flex-column align-items-center">
@@ -77,7 +77,7 @@
           class="col-12 col-md-6 col-lg-4"
           v-for="item in qualification"
           :key="item.id"
-          v-motion-slide-visible-once-bottom
+          v-motion-slide-visible-bottom
         >
           <div class="card w-100 h-100 p-3">
             <div class="card-body">

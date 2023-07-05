@@ -4,7 +4,7 @@
     <div class="intro-container">
       <div class="intro-title">
         <p class="float m-0"></p>
-        <h2 class="intro-h2">
+        <h2 class="intro-h2 mt-2">
           Hi, I am <br />
           Justin <span>Scholtz</span>
         </h2>
@@ -22,7 +22,7 @@ async function getData(){
         </div>
       </div>
       <div class="intro-img"></div>
-      <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" loading="lazy" class="intro-mobile img" alt="">
+      <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" loading="lazy" class="intro-mobile img">
       <div class="intro-bg">
         <div class="icon-container" v-motion-fade>
           <a href="#"><i class="bi bi-linkedin text-white icons"></i></a>
@@ -42,12 +42,6 @@ async function getData(){
 
 <style scoped>
 
-.float::before {
-  content: "<welcome/>";
-  font-size: 2rem;
-  font-weight: lighter;
-  opacity: 0.3;
-}
 
 .icon-container {
   display: flex;
@@ -60,7 +54,7 @@ async function getData(){
 .intro-container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(10, 6rem);
+  grid-template-rows: repeat(7, 6rem);
   position: relative;
 }
 
@@ -98,7 +92,7 @@ img {
   padding: 1rem;
   color: #000;
   grid-column: 1 / 6;
-  grid-row: 2 / 7;
+  grid-row: 1 / 6;
   font-weight: bolder;
 }
 
@@ -128,7 +122,7 @@ img {
 
 .intro-img {
   grid-column: 6 / 9;
-  grid-row: 1 / -1;
+  grid-row: 1 / 8;
   background: url(https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg) center no-repeat;
   background-size: cover;
   filter: grayscale();
@@ -154,8 +148,8 @@ img {
 }
 
 .intro-bg {
-  grid-column: 1 / 6;
-  grid-row: 8 / -1;
+  grid-column: 1 / 9;
+  grid-row: 6 / 8;
   background-color: #262626;
 }
 
@@ -194,12 +188,6 @@ span{
   animation-delay: 450ms;
   animation-fill-mode: forwards;
 }
-
-.img{
-  filter: grayscale();
-}
-
-
 
 @keyframes fadeColor {
   0%{
