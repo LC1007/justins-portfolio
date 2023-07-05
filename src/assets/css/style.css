@@ -13,6 +13,11 @@
     --grayColor: #737997;
 }
 
+body{
+    scroll-margin-top: 5rem;
+    overflow-x: hidden;
+}
+
 .custom-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

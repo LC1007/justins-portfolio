@@ -8,7 +8,8 @@ export default createStore({
     education: [],
     work: [],
     projects: [],
-    testimonials: []
+    testimonials: [],
+    qualification: []
   },
   getters: {
   },
@@ -27,6 +28,9 @@ export default createStore({
     },
     setTestimonials(state, data){
       state.testimonials = data
+    },
+    setQualification(state, data){
+      state.qualification = data
     }
   },
   actions: {
@@ -49,6 +53,10 @@ export default createStore({
     async getTestimonials({commit}){
       const getTestimonialData = await axios.get(url)
       commit('setTestimonials', getTestimonialData.data.testimonials)
+    },
+    async getQualifications({commit}){
+      const getQualificationData = await axios.get(url)
+      commit('setQualification', getQualificationData.data.qualification)
     }
   },
   modules: {

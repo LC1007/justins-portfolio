@@ -7,5 +7,7 @@ import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import '@/assets/css/style.css'
+import vueScrollTo from 'vue-scrollto'
+import { MotionPlugin } from '@vueuse/motion'
 
-createApp(App).use(store).use(router).mount('#app')
+createApp(App).use(store).use(router).use(vueScrollTo).use(MotionPlugin).mount('#app')
