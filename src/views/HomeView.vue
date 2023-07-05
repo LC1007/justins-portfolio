@@ -8,12 +8,21 @@
           <img
             src="https://i.postimg.cc/kGN2090d/C12-Justin-Scholtz-3-min.jpg"
             loading="lazy"
-            class="mb-4 w-75"
+            class="mb-4 w-75 m-auto"
             alt=""
+            v-motion
+       :initial="{
+         opacity: 0,
+         y: 100,
+       }"
+       :visible="{
+         opacity: 1,
+         y: 0,
+       }"
           />
         </div>
         <div class="col-12 col-md-6 col">
-          <h2>About <span>Me</span></h2>
+          <h2 v-motion-slide-bottom>About <span>Me</span></h2>
           <p>
             My name is Justin Scholtz and web development has been a passion of
             mine ever since 2016 when I attended a intro to web development at a
@@ -33,18 +42,78 @@
         </div>
       </div>
     </div>
-    <!-- Contact Form -->
-    <ContactComp/>
+     <!-- Interests -->
+
+     <h2 class="mb-4 fw-lighter">Inter<span>ests</span></h2>
+     <div class="mb-5 card-group">
+       <div class="card w-100" style="width: 18rem;" v-motion
+       :initial="{
+         opacity: 0,
+         y: 100,
+       }"
+       :enter="{
+         opacity: 1,
+         y: 0,
+         transition: {
+          delay: 500,
+         }
+       }">
+         <div class="card-body">
+           <div class="d-flex flex-column align-items-center m-2">
+             <ion-icon name="football-outline" size="large"></ion-icon>
+             <h5 class="card-title">Sports</h5>
+           </div>
+           <p class="card-text">Huge soccer fan, if I'm not watching soccer then I'm playing soccer with friends. You'd always catch me with a ball because I grew up with one.</p>
+         </div>
+       </div>
+       <div class="card w-100" style="width: 18rem;" v-motion
+       :initial="{
+         opacity: 0,
+         y: 100,
+       }"
+       :enter="{
+         opacity: 1,
+         y: 0,
+         transition: {
+          delay: 1000,
+         }
+       }">
+           <div class="card-body">
+             <div class="d-flex flex-column align-items-center m-2">
+               <ion-icon name="game-controller-outline" size="large"></ion-icon>
+               <h5 class="card-title">Gaming</h5>
+             </div>
+             <p class="card-text">If I'm not in front of the laptop coding away then I'm in front of the tv playing games, always improving my skills and XP.</p>
+           </div>
+         </div>
+         <div class="card w-100" style="width: 18rem;" v-motion
+         :initial="{
+           opacity: 0,
+           y: 100,
+         }"
+         :enter="{
+           opacity: 1,
+           y: 0,
+           transition: {
+            delay: 1500,
+           }
+         }">
+           <div class="card-body">
+             <div class="d-flex flex-column align-items-center m-2">
+               <ion-icon name="hammer-outline" size="large"></ion-icon>
+               <h5 class="card-title">Hands On Experience</h5>
+             </div>
+             <p class="card-text">I like breaking things and then fixing them, since a child I've been breaking lots of things which is where my passion for breaking things came from. I love building things no matter how small the project.</p>
+           </div>
+         </div>
+     </div>
   </div>
 </template>
 
 <script>
-import ContactComp from '@/components/ContactComp.vue'
-  export default{
-    components:{
-      ContactComp
-    }
-  }
+export default{
+
+}
 </script>
 
 <style scoped>

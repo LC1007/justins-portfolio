@@ -1,4 +1,5 @@
 <template>
+  <div id="home"></div>
   <div>
     <div class="intro-container">
       <div class="intro-title">
@@ -23,7 +24,7 @@ async function getData(){
       <div class="intro-img"></div>
       <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" loading="lazy" class="intro-mobile img" alt="">
       <div class="intro-bg">
-        <div class="icon-container">
+        <div class="icon-container" v-motion-fade>
           <a href="#"><i class="bi bi-linkedin text-white icons"></i></a>
           <a href="#"><i class="bi bi-instagram text-white icons"></i></a>
           <a href="#"><i class="bi bi-facebook text-white icons"></i></a>
@@ -106,7 +107,7 @@ img {
 }
 
 .intro-text {
-  font-size: calc(.6rem + 6 * ((100vw - 320px) / 680));
+  font-size: calc(.2rem + 6 * ((100vw - 320px) / 680));
   font-weight: lighter;
   animation: type 3.5s steps(30, end), blink-caret .75s step-end infinite;
 }
@@ -116,8 +117,8 @@ img {
 }
 
 @keyframes type {
-  from{ width: 0}
-  to{ width: 100%}
+  from{ width: 0 }
+  to{ width: 100% }
 }
 
 @keyframes blink-caret {
@@ -128,8 +129,24 @@ img {
 .intro-img {
   grid-column: 6 / 9;
   grid-row: 1 / -1;
-  background: url(https://images.pexels.com/photos/3671300/pexels-photo-3671300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) center no-repeat;
+  background: url(https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg) center no-repeat;
   background-size: cover;
+  filter: grayscale();
+  animation-name: fadeImg;
+  animation-duration: 1050ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeImg {
+  0%{
+    filter: grayscale();
+  }
+  50%{
+    filter: grayscale();
+  }
+  100%{
+    filter: none;
+  }
 }
 
 .intro-mobile {
@@ -180,22 +197,9 @@ span{
 
 .img{
   filter: grayscale();
-  animation-name: fadeImg;
-  animation-fill-mode: forwards;
-  animation-duration: 1050ms;
 }
 
-@keyframes fadeImg {
-  0%{
-    filter: grayscale();
-  }
-  50%{
-    filter: grayscale();
-  }
-  100%{
-    filter: none;
-  }
-}
+
 
 @keyframes fadeColor {
   0%{
