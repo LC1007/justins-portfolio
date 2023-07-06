@@ -39,32 +39,60 @@ export default createStore({
   },
   actions: {
     async getData({commit}){
-      const getSkills = await axios.get(url)
-      commit('setSkills', getSkills.data.skills)
+      try {        
+        const getSkills = await axios.get(url)
+        commit('setSkills', getSkills.data.skills)
+      } catch (error) {
+        alert(error);
+      }
     },
     async getEdu({commit}){
-      const getEduData = await axios.get(url)
-      commit('setEdu', getEduData.data.education)
+      try {        
+        const getEduData = await axios.get(url)
+        commit('setEdu', getEduData.data.education)
+      } catch (error) {
+        alert(error);
+      }
     },
     async getWork({commit}){
-      const getWorkData = await axios.get(url)
-      commit('setWork', getWorkData.data.work)
+      try {
+        const getWorkData = await axios.get(url)
+        commit('setWork', getWorkData.data.work)
+      } catch (error) {
+        alert(error);
+      }
     },
     async getProjects({commit}){
-      const getProjectData = await axios.get(url)
-      commit('setProjects', getProjectData.data.projects)
+      try {
+        const getProjectData = await axios.get(url)
+        commit('setProjects', getProjectData.data.projects)
+      } catch (error) {
+        alert(error);
+      }
     },
     async getTestimonials({commit}){
-      const getTestimonialData = await axios.get(url)
-      commit('setTestimonials', getTestimonialData.data.testimonials)
+      try {
+        const getTestimonialData = await axios.get(url)
+        commit('setTestimonials', getTestimonialData.data.testimonials)
+      } catch (error) {
+        alert(error);
+      }
     },
     async getQualifications({commit}){
-      const getQualificationData = await axios.get(url)
-      commit('setQualification', getQualificationData.data.qualification)
+      try {
+        const getQualificationData = await axios.get(url)
+        commit('setQualification', getQualificationData.data.qualification)
+      } catch (error) {
+        alert(error);
+      }
     },
     async getAbout({commit}){
-      const getAboutData = await axios.get(url)
-      commit('setAbout', getAboutData.data.aboutMe)
+      try {        
+        const getAboutData = await axios.get(url)
+        commit('setAbout', getAboutData.data.aboutMe)
+      } catch (error) {
+        alert(error);
+      }
     }
   },
   modules: {
