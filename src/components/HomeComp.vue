@@ -42,7 +42,7 @@
                       loading="lazy"
                       class="mb-4 w-75 m-auto"
                       alt=""
-                      v-motion :initial="{opacity: 0, y: 100, }" :visible="{opacity: 1, y: 0, }"
+                      
                     />
                   </div>
                   <div class="col-12 col-md-6 col">
