@@ -20,6 +20,9 @@
               <router-link class="nav-links active" to="/" exact v-scroll-to="{ el: '#home', offset: -600 }">Home</router-link>
             </li>
             <li class="nav-item nav-item my-2 my-sm-2 my-md-2">
+              <router-link class="nav-links" to="/about" exact v-scroll-to="{ el: '#about', offset: -600 }">About</router-link>
+            </li>
+            <li class="nav-item nav-item my-2 my-sm-2 my-md-2">
               <router-link class="nav-links" to="/resume" exact v-scroll-to="{ el: '#resume', offset: -600 }">Resume</router-link>
             </li>
             <li class="nav-item nav-item my-2 my-sm-2 my-md-2">
@@ -32,7 +35,7 @@
               <router-link class="nav-links" to="/contact" exact v-scroll-to="{ el: '#contact', offset: -600 }">Contact</router-link>
             </li>
             <li class="nav-links ms-md-2">
-              <a href="../assets/cv/CV of Justin Scholtz - IT CV.pdf" class="btn custom-btn" download>Download CV</a>
+              <a href="../assets/cv/CV of Justin Scholtz - IT CV.pdf" class="btn custom-btn" download="cv.pdf">Download CV</a>
             </li>
           </ul>
         </div>

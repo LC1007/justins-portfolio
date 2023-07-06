@@ -9,7 +9,8 @@ export default createStore({
     work: [],
     projects: [],
     testimonials: [],
-    qualification: []
+    qualification: [],
+    aboutMe: []
   },
   getters: {
   },
@@ -31,6 +32,9 @@ export default createStore({
     },
     setQualification(state, data){
       state.qualification = data
+    },
+    setAbout(state, data){
+      state.aboutMe = data
     }
   },
   actions: {
@@ -57,6 +61,10 @@ export default createStore({
     async getQualifications({commit}){
       const getQualificationData = await axios.get(url)
       commit('setQualification', getQualificationData.data.qualification)
+    },
+    async getAbout({commit}){
+      const getAboutData = await axios.get(url)
+      commit('setAbout', getAboutData.data.aboutMe)
     }
   },
   modules: {
