@@ -1,215 +1,84 @@
 <template>
-  <div id="home"></div>
-  <div>
-    <div class="intro-container">
-      <div class="intro-title">
-        <p class="float m-0"></p>
-        <h2 class="intro-h2 mt-2">
-          Hi, I am <br />
-          Justin <span>Scholtz</span>
-        </h2>
-        <pre class="intro-text">
-async function getData(){
-  const data = await axios.get("Aspiring Front End <span>Developer</span>")
-  console.log("Welcome")
-}
-</pre>
-        <div class="btns">
-          <button class="contact-btn m-0">Contact Me</button>
-          <router-link to="/resume" class="project-btn">
-            Projects<i class="bi bi-box-arrow-up-right mx-2"></i>
-          </router-link>
-        </div>
-      </div>
-      <div class="intro-img"></div>
-      <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" loading="lazy" class="intro-mobile img">
-      <div class="intro-bg">
-        <div class="icon-container" v-motion-fade>
-          <a href="#"><i class="bi bi-linkedin text-white icons"></i></a>
-          <a href="#"><i class="bi bi-instagram text-white icons"></i></a>
-          <a href="#"><i class="bi bi-facebook text-white icons"></i></a>
-        </div>
-      </div>
+    <div>
+            <div class="intro-container">
+              <div class="intro-title">
+                <p class="float m-0"></p>
+                <h2 class="intro-h2 mt-2">
+                  Hi, I am <br />
+                  Justin <span>Scholtz</span>
+                </h2>
+                <pre class="intro-text">
+        async function getData(){
+          const data = await axios.get("Aspiring Front End <span>Developer</span>")
+          console.log("Welcome")
+        }
+        </pre>
+                <div class="btns">
+                  <button class="contact-btn m-0">Contact Me</button>
+                  <router-link to="/resume" class="project-btn">
+                    Projects<i class="bi bi-box-arrow-up-right mx-2"></i>
+                  </router-link>
+                </div>
+              </div>
+              <div class="intro-img"></div>
+              <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" loading="lazy" class="intro-mobile img">
+              <div class="intro-bg">
+                <div class="d-flex flex-column h-100 justify-content-center align-items-center" v-motion-fade>
+                  <h2 class="fw-lighter text-center text-white">Home</h2>
+                  <Icons/>
+                </div>
+                <Icons/>
+              </div>
+            </div>
+            <div class="container">
+                <!-- About Me Section -->
+                
+                <div id="home"></div>
+              <div class="about-container m-5">
+                <div class="row">
+                  <div class="col-sm-12 col-md-6 col">
+                    <img
+                      src="https://i.postimg.cc/kGN2090d/C12-Justin-Scholtz-3-min.jpg"
+                      loading="lazy"
+                      class="mb-4 w-75 m-auto"
+                      alt=""
+                      v-motion :initial="{opacity: 0, y: 100, }" :visible="{opacity: 1, y: 0, }"
+                    />
+                  </div>
+                  <div class="col-12 col-md-6 col">
+                    <h2 v-motion-slide-bottom>About <span>Me</span></h2>
+                    <p class="mb-5">
+                      My name is Justin Scholtz and web development has been a passion of
+                      mine ever since 2016 when I attended a intro to web development at a
+                      company called Rlabs, we did a month long course where we were
+                      introduced to HTML and CSS. What made me realize it was my passion
+                      was the amount of times I could of given up but didn't, I still had
+                      that fire in me to succeed the challenges and become a front end web
+                      developer. My journey consists of me joining a bootcamp and self
+                      studing, over my journey I've reached a point where I'm very
+                      comfortable with HTML and CSS but I'm still learning the ropes of
+                      JavaScript, I would love to then grow my VUE JS skills as my JS
+                      framework to broaden my skill set. I now feel like I'm ready to take
+                      on the next step in my journey and find employement as front end
+                      developer, Life Choices prepared me well for the next stage of my
+                      life so I'm ready for anything and everything.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
     </div>
-  </div>
 </template>
 
 <script>
-    export default {
-        
+import Icons from '@/components/IconComp.vue'
+    export default{
+      components: {
+        Icons
+      }
     }
 </script>
 
 <style scoped>
 
-
-.icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  height: 100%;
-}
-
-.intro-container {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(7, 6rem);
-  position: relative;
-}
-
-.icons {
-  font-size: 3rem;
-}
-
-button {
-  padding: 1rem 2.5rem;
-  border: none;
-}
-
-.contact-btn {
-  background-color: #fe481c;
-  color: #fff;
-}
-
-.project-btn {
-  margin-left: 1rem;
-  background-color: transparent;
-  color: #000;
-  text-decoration: none;
-  font-weight: lighter;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-.intro-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
-  color: #000;
-  grid-column: 1 / 6;
-  grid-row: 1 / 6;
-  font-weight: bolder;
-}
-
-.intro-title>h2 {
-  font-size: calc(4rem + 6 * ((100vw - 320px) / 680));
-}
-
-.intro-text {
-  font-size: calc(.2rem + 6 * ((100vw - 320px) / 680));
-  font-weight: lighter;
-  animation: type 3.5s steps(30, end), blink-caret .75s step-end infinite;
-}
-
-.intro-text::-webkit-scrollbar{
-  display: none;
-}
-
-@keyframes type {
-  from{ width: 0 }
-  to{ width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to{ border-color: transparent}
-  50%{ border-color: orange;}
-}
-
-.intro-img {
-  grid-column: 6 / 9;
-  grid-row: 1 / 8;
-  background: url(https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg) center no-repeat;
-  background-size: cover;
-  filter: grayscale();
-  animation-name: fadeImg;
-  animation-duration: 1050ms;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeImg {
-  0%{
-    filter: grayscale();
-  }
-  50%{
-    filter: grayscale();
-  }
-  100%{
-    filter: none;
-  }
-}
-
-.intro-mobile {
-  display: none;
-}
-
-.intro-bg {
-  grid-column: 1 / 9;
-  grid-row: 6 / 8;
-  background-color: #262626;
-}
-
-@media (width <= 64rem) {
-  .intro-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3rem;
-  }
-
-  .intro-title {
-    text-align: center;
-  }
-
-  .intro-mobile {
-    display: block;
-  }
-}
-
-@media (width <= 26rem) {
-  .intro-text{
-    display: none;
-  }
-}
-
-.intro-h2{
-  animation-name: fadeIn;
-  animation-duration: 1070ms;
-  overflow: hidden;
-}
-
-span{
-  color: #000;
-  animation-name: fadeColor;
-  animation-duration: 1070ms;
-  animation-delay: 450ms;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeColor {
-  0%{
-    color: #000;
-  }
-  50%{
-    color: #000;
-  }
-  100%{
-    color: var(--orangeColor);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  50%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
 </style>
