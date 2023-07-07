@@ -51,43 +51,40 @@
           />
         </div>
         <div class="col-12 col-md-6 col-lg-6">
-          <form action="https://formspree.io/f/xayzkqly" class="form">
+          <form action="https://formspree.io/f/xayzkqly" method="post" class="form">
             <h1 v-motion-slide-bottom class="display-1 text-center my-5">Con<span>tact Me</span></h1>
             <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input
+              <FormKit
                 type="text"
-                class="form-control"
-                id="name"
-                placeholder="John Doe"
+                label="Name"
+                validation="required:trim"
+                help="e.g John Doe"
+                name="name"
               />
             </div>
             <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input
+              <FormKit
                 type="email"
-                class="form-control"
-                id="email"
-                placeholder="name@example.com"
+                label="Email"
+                validation="email"
+                validation-visibility="live"
+                help="john@email.com"
+                name="email"
               />
             </div>
             <div class="mb-3">
-              <label for="text" class="form-label">Subject</label>
-              <input
+              <FormKit
                 type="text"
-                class="form-control"
-                id="email"
+                label="Subject"
+                validation="required:trim"
+                name="subject"
               />
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label"
-                >Message</label
-              >
-              <textarea
-                class="form-control"
-                id="exampleFormControlTextarea1"
-                rows="3"
-              ></textarea>
+              <FormKit 
+              type="textarea"
+              label="Message"
+              validation="required:trim" />
             </div>
             <div class="d-flex justify-content-center m-4">
               <button class="btn btn-custom">Send Message</button>
@@ -107,5 +104,9 @@
   .btn-custom {
     background-color: var(--orangeColor);
     color: #fff;
+  }
+
+  .formkit-inner{
+    background-color: blue;
   }
   </style>
