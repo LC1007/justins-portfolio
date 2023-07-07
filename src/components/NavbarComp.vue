@@ -35,7 +35,7 @@
               <router-link class="nav-links" to="/contact" exact v-scroll-to="{ el: '#contact', offset: -600 }">Contact</router-link>
             </li>
             <li class="nav-links ms-md-2">
-              <a href="../assets/cv/CV of Justin Scholtz - IT CV.pdf" class="btn custom-btn" download="cv.pdf">Download CV</a>
+              <a href="https://drive.google.com/uc?export=download&id=1_f9PthPzd4fz9f4si_L0v2mUeCTYc0IS" class="btn custom-btn" download>Download CV</a>
             </li>
           </ul>
         </div>

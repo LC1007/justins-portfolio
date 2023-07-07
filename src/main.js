@@ -9,5 +9,15 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import '@/assets/css/style.css'
 import vueScrollTo from 'vue-scrollto'
 import { MotionPlugin } from '@vueuse/motion'
+import { plugin, defaultConfig } from '@formkit/vue'
+import { fr } from '@formkit/i18n'
+import '@formkit/themes/genesis'
 
-createApp(App).use(store).use(router).use(vueScrollTo).use(MotionPlugin).mount('#app')
+const config = {
+  locales: { fr },
+  locale: 'fr',
+}
+
+export default config
+
+createApp(App).use(store).use(router).use(vueScrollTo).use(MotionPlugin).use(plugin, defaultConfig).mount('#app')

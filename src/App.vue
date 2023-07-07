@@ -1,17 +1,35 @@
 <template>
-  <Navbar/>
-  <router-view/>
-  <FooterComp/>
+  <div id="app">
+    <Loading v-if="loading"/>
+    <div v-else>
+      <Navbar/>
+      <router-view/>
+      <FooterComp/>
+    </div>
+  </div>
 </template>
 
 <script>
   import Navbar from '@/components/NavbarComp.vue'
   import FooterComp from '@/components/FooterComp.vue'
+  import Loading from '@/components/LoadingComp.vue'
 
   export default{
+    name: 'App',
     components: {
       Navbar,
-      FooterComp
+      FooterComp,
+      Loading
+    },
+    data(){
+      return{
+        loading: true
+      }
+    },
+    mounted(){
+      setTimeout(()=>{
+        this.loading = false
+      }, 2000)
     }
   }
 </script>
