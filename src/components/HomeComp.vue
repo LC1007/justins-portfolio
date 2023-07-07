@@ -19,8 +19,8 @@
       }
       </pre>
                     <div class="btns">
-                        <router-link to="/contact" exact>
-                            <button class="contact-btn m-0">Contact Me</button>
+                        <router-link to="/about" exact>
+                            <button class="contact-btn m-0">About Me</button>
                         </router-link>
                         <router-link to="/projects" class="project-btn">
                             Projects<i class="bi bi-box-arrow-up-right mx-2"></i>
@@ -31,6 +31,7 @@
                 <img src="https://i.postimg.cc/y8f3TqgG/C-LWEDDING-1170.jpg" loading="lazy" class="intro-mobile img">
                 <div class="intro-bg">
                     <div class="d-flex flex-column h-100 justify-content-center align-items-center" v-motion-fade>
+                        <h2 class="text-white fw-light">Contact Me</h2>
                         <div>
                             <a href="https://www.linkedin.com/in/justin-scholtz-08403713a" target="_blank" class="p-2"><i
                                     class="bi bi-linkedin text-white icons"></i></a>
@@ -38,6 +39,7 @@
                                     class="bi bi-instagram text-white icons"></i></a>
                             <a href="https://www.facebook.com/justin.scholtz.79" target="_blank" class="p-2"><i
                                     class="bi bi-facebook text-white icons"></i></a>
+                            <router-link to="/contact" class="p-2"><i class="bi bi-telephone-fill text-white icons"></i></router-link>
                         </div>
                     </div>
 

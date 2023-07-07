@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top px-6">
       <div class="container-fluid">
-        <h1>Dev.</h1>
+        <router-link class="display-6 fw-medium text-decoration-none text-black" to="/" exact >Dev.</router-link>
         <button
           class="navbar-toggler"
           type="button"
