@@ -186,38 +186,6 @@ img {
   display: none;
 }
 
-@media only screen and (width < 65rem) {
-  .intro-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .intro-h2{
-    display: none;
-  }
-
-  .mobile-title{
-    display: block;
-    font-size: calc(4rem + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-    padding-bottom: 3rem;
-  }
-
-  .intro-title {
-    grid-column: 1 / 4;
-    text-align: center;
-  }
-
-  .intro-img{
-    display: none;
-  }
-
-  .intro-mobile {
-    display: none;
-  }
-
-  .intro-text{
-    display: none;
-  }
-}
 
 .intro-h2{
   animation-name: fadeIn;
@@ -257,7 +225,8 @@ span{
   }
 }
 
-@media only screen and (max-width: 65rem) {
+
+@media only screen and (width <= 1040px) {
   .intro-container {
     grid-template-columns: repeat(3, 1fr);
   }
