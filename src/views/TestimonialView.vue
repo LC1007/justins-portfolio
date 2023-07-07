@@ -109,7 +109,9 @@
   #ch-one,
   #ch-two,
   #ch-three,
-  #ch-four {
+  #ch-four,
+  #ch-five,
+  #ch-six {
     display: none;
   }
   
@@ -145,6 +147,22 @@
     display: none;
   }
   
+  #ch-five:checked ~ .content {
+    display: block;
+  }
+  
+  #ch-five:checked ~ label {
+    display: none;
+  }
+
+  #ch-six:checked ~ .content {
+    display: block;
+  }
+  
+  #ch-six:checked ~ label {
+    display: none;
+  }
+
   label {
     background-color: var(--orangeColor);
     color: #fff;
