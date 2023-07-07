@@ -44,7 +44,7 @@
         <!-- This is my hero section end -->
 
         <!-- About Me Starts -->
-                <div id="home" class="mb-5"></div>
+                <div id="about" class="mb-5"></div>
                 <div class="container m-auto">
                     <div class="row">
                         <div class="col-sm-12 col-md-6 col">

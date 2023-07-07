@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div id="home"></div>
     <div>
       <div class="intro-container">
         <div class="intro-title">
@@ -40,7 +39,7 @@
       </div>
     </div>
     <div id="testimonials"></div>
-    <div class="container">
+    <div class="container mb-5">
       <h1 class="display-1 text-center mb-5 mt-2">Testimo<span>nials</span></h1>
       <div class="row">
         <div

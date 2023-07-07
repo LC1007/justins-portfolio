@@ -1,6 +1,5 @@
 <template>
     <div>
-        <div id="home"></div>
         <div>
           <div class="intro-container">
             <div class="intro-title">
