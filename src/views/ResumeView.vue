@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div id="home"></div>
     <div>
       <div class="intro-container">
         <div class="intro-title">
@@ -127,7 +126,7 @@
                 :alt="item"
               />
               <h4 class="card-title">{{ item.provider }}</h4>
-              <p class="card-text">{{ item.qual }}</p>
+              <p class="card-text">{{ item.qualification }}</p>
               <p class="card-text">{{ item.date }}</p>
             </div>
           </div>
