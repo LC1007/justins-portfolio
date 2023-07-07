@@ -17,22 +17,22 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item nav-item my-2 my-sm-2 my-md-2">
-              <router-link class="nav-links active" to="/" exact v-scroll-to="{ el: '#home', offset: -600 }">Home</router-link>
+              <router-link class="nav-links active" to="/" exact >Home</router-link>
             </li>
             <li class="nav-item nav-item my-2 my-sm-2 my-md-2">
-              <router-link class="nav-links" to="/about" exact v-scroll-to="{ el: '#about', offset: -600 }">About</router-link>
+              <router-link class="nav-links" to="/about" exact >About</router-link>
             </li>
             <li class="nav-item nav-item my-2 my-sm-2 my-md-2">
-              <router-link class="nav-links" to="/resume" exact v-scroll-to="{ el: '#resume', offset: -600 }">Resume</router-link>
+              <router-link class="nav-links" to="/resume" exact >Resume</router-link>
             </li>
             <li class="nav-item nav-item my-2 my-sm-2 my-md-2">
-              <router-link class="nav-links" to="/projects" exact v-scroll-to="{ el: '#projects', offset: -600 }">Projects</router-link>
+              <router-link class="nav-links" to="/projects" exact >Projects</router-link>
             </li>
             <li class="nav-item nav-item my-2 my-sm-2 my-md-2">
-              <router-link class="nav-links" to="/testimonials" exact v-scroll-to="{ el: '#testimonials', offset: -600 }">Testimonials</router-link>
+              <router-link class="nav-links" to="/testimonials" exact >Testimonials</router-link>
             </li>
             <li class="nav-item nav-item my-2 my-sm-2 my-md-2">
-              <router-link class="nav-links" to="/contact" exact v-scroll-to="{ el: '#contact', offset: -600 }">Contact</router-link>
+              <router-link class="nav-links" to="/contact" exact >Contact</router-link>
             </li>
             <li class="nav-links ms-md-2">
               <a href="https://drive.google.com/uc?export=download&id=1_f9PthPzd4fz9f4si_L0v2mUeCTYc0IS" class="btn custom-btn" download>Download CV</a>
